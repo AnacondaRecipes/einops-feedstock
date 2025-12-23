@@ -1,5 +1,5 @@
 {% set name = "einops" %}
-{% set version = "0.6.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6f6c78739316a2e3ccbce8052310497e69da092935e4173f2e76ec4e3a336a35
+  sha256: de5d960a7a761225532e0f1959e5315ebeafc0cd43394732f103ca44b9837e84
 
 build:
-  noarch: python
+  skip: true # [ py<310 ]
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python
     - hatchling >=1.10.0
   run:
-    - python >=3.7
+    - python
 
 test:
   imports:
