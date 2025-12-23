@@ -32,15 +32,15 @@ test:
     - pip
 
 about:
-  home: https://github.com/arogozhnikov/einops
+  home: https://einops.rocks/
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: A new flavour of deep learning operations.
+  summary: Flexible and powerful tensor operations for readable and reliable code.
   description: |
     Flexible and powerful tensor operations for readable and reliable code.
     Supports numpy, pytorch, tensorflow, and others.
-  doc_url: https://github.com/arogozhnikov/einops
+  doc_url: https://einops.rocks/
   dev_url: https://github.com/arogozhnikov/einops
 
 extra:
