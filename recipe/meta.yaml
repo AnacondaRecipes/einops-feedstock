@@ -10,7 +10,7 @@ source:
   sha256: de5d960a7a761225532e0f1959e5315ebeafc0cd43394732f103ca44b9837e84
 
 build:
-  skip: true # [ py<310 ]
+  skip: true # [py<310]
   number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -28,8 +28,11 @@ test:
     - einops.layers
   commands:
     - pip check
+    - python -m einops.tests.run_tests numpy
   requires:
     - pip
+    - pytest
+    - numpy
 
 about:
   home: https://einops.rocks/
