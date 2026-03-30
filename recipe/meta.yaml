@@ -47,6 +47,11 @@ about:
   dev_url: https://github.com/arogozhnikov/einops
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/49522
+    reason: Dependency for vllm
+  recipe-maintainers:
+    - ianaobi
   recipe-maintainers:
     - maresb
     - asford
